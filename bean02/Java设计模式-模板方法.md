@@ -5,8 +5,8 @@
 ## 定义
    一个操作中的算法的框架，而将一些步骤延迟到子类中。使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤。
 ## 通用类图说明
-![类关系说明图](https://github.com/maenylee/demo_spring/blob/main/docs/img/bean02/class_relative.png?raw=true)
-
+![类关系说明图](https://github.com/maenylee/demo_spring/blob/main/docs/img/bean02/class_relative.jpg?raw=true)
+                                     
 Abstract Class叫做抽象模板，它的方法分为两类：模板方法和基本方法。
 
 基本方法：基本方法也叫做基本操作，是由子类实现的方法，并且在模板方法中被调用。
