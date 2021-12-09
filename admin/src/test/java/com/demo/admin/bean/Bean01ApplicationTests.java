@@ -1,6 +1,6 @@
-package com.demo.admin.bean01;
+package com.demo.admin.bean;
 
-import com.demo.admin.bean01.service.UserService;
+import com.demo.admin.bean.service.UserService;
 import com.demo.bean01.BeanDefinition;
 import com.demo.bean01.BeanFactory;
 import org.junit.jupiter.api.Test;

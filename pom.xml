@@ -11,6 +11,7 @@
     <modules>
         <module>admin</module>
         <module>bean01</module>
+        <module>bean02</module>
     </modules>
 
     <dependencyManagement>
