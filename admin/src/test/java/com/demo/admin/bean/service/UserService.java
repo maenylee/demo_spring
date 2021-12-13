@@ -18,7 +18,25 @@ package com.demo.admin.bean.service;
  * @since 1.0.0
  */
 public class UserService {
+
+  private String name;
+
+  public UserService() {
+  }
+
+  public UserService(String name) {
+    this.name = name;
+  }
+
   public void service(){
-    System.err.println("success information");
+    String s = this.toString();
+    System.err.println(s);
+  }
+
+  @Override
+  public String toString() {
+    final StringBuilder sb = new StringBuilder("");
+    sb.append("").append(name);
+    return sb.toString();
   }
 }
