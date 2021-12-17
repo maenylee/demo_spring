@@ -1,6 +1,6 @@
-package com.demo.bean04.factory;
+package com.demo.bean05.factory;
 
-import com.demo.bean04.BeansException;
+import com.demo.bean05.BeansException;
 
 /**
  * Bean工厂
@@ -21,4 +21,14 @@ public interface BeanFactory {
    * @throws BeansException
    */
   Object getBean(String name, Object... args) throws BeansException;
+
+  /**
+   * 根据bean类型获取bean
+   * @param name
+   * @param requiredType
+   * @param <T>
+   * @return
+   * @throws BeansException
+   */
+  <T> T getBean(String name, Class<T> requiredType) throws BeansException;
 }

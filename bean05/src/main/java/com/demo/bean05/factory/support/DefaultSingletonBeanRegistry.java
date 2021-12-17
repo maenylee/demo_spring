@@ -7,7 +7,9 @@
  * <author>          <time>          <version>          <desc>
  * 作者姓名           修改时间           版本号              描述
  */
-package com.demo.bean04.factory.config;
+package com.demo.bean05.factory.support;
+
+import com.demo.bean05.factory.config.SingletonBeanRegistry;
 
 import java.util.HashMap;
 import java.util.Map;

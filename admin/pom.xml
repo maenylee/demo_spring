@@ -46,6 +46,11 @@
             <artifactId>bean04</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.demo</groupId>
+            <artifactId>bean05</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>

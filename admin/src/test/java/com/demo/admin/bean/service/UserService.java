@@ -11,6 +11,8 @@ package com.demo.admin.bean.service;
 
 import com.demo.admin.bean.dao.UserDao;
 
+import java.io.Serializable;
+
 /**
  * 〈一句话功能简述〉<br> 
  * 〈工具类〉
@@ -19,7 +21,7 @@ import com.demo.admin.bean.dao.UserDao;
  * @create 2021/12/6
  * @since 1.0.0
  */
-public class UserService {
+public class UserService implements Serializable {
 
   private String name;
 
@@ -40,7 +42,7 @@ public class UserService {
   }
 
   public void queryUserInfo() {
-    System.out.println("查询用户信息：" + userDao.queryUserName(uId));
+    System.err.println("查询用户信息：" + userDao.queryUserName(uId));
   }
 
   @Override
