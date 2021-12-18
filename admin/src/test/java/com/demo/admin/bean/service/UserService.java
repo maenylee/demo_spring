@@ -29,6 +29,9 @@ public class UserService implements Serializable {
 
   private UserDao userDao;
 
+  private String company;
+  private String location;
+
   public UserService() {
   }
 
@@ -42,7 +45,10 @@ public class UserService implements Serializable {
   }
 
   public void queryUserInfo() {
-    System.err.println("查询用户信息：" + userDao.queryUserName(uId));
+    System.err.println("查询用户信息："
+            + userDao.queryUserName(uId)
+            + "-" + company
+            + "-" + location);
   }
 
   @Override
@@ -74,5 +80,21 @@ public class UserService implements Serializable {
 
   public void setUserDao(UserDao userDao) {
     this.userDao = userDao;
+  }
+
+  public String getCompany() {
+    return company;
+  }
+
+  public void setCompany(String company) {
+    this.company = company;
+  }
+
+  public String getLocation() {
+    return location;
+  }
+
+  public void setLocation(String location) {
+    this.location = location;
   }
 }

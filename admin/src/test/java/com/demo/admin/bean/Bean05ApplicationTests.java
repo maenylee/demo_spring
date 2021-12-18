@@ -71,7 +71,7 @@ class Bean05ApplicationTests {
 
     // 2. 读取配置文件&注册Bean
     XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(beanFactory);
-    reader.loadBeanDefinitions("classpath:spring.xml");
+    reader.loadBeanDefinitions("classpath:spring_05.xml");
 
     // 3. 获取Bean对象调用方法
     UserService userService = beanFactory.getBean("userService",UserService.class);
