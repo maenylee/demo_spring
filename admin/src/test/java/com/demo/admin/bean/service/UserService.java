@@ -10,6 +10,8 @@
 package com.demo.admin.bean.service;
 
 import com.demo.admin.bean.dao.UserDao;
+import com.demo.bean07.factory.DisposableBean;
+import com.demo.bean07.factory.InitializingBean;
 
 import java.io.Serializable;
 
@@ -21,7 +23,15 @@ import java.io.Serializable;
  * @create 2021/12/6
  * @since 1.0.0
  */
-public class UserService implements Serializable {
+public class UserService implements Serializable, InitializingBean, DisposableBean {
+
+  public void destroy() {
+    System.err.println("执行：UserService.destroy");
+  }
+
+  public void afterPropertiesSet(){
+    System.err.println("执行：UserService.afterPropertiesSet");
+  }
 
   private String name;
 

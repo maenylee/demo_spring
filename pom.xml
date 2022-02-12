@@ -16,6 +16,7 @@
         <module>bean04</module>
         <module>bean05</module>
         <module>bean06</module>
+        <module>bean07</module>
     </modules>
 
     <dependencyManagement>

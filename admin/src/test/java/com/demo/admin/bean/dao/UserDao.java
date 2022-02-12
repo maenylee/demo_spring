@@ -29,6 +29,18 @@ public class UserDao {
     hashMap.put("10003", "ddddd");
   }
 
+  public void initDataMethod(){
+    System.err.println("执行：init-method");
+    hashMap.put("10004", "eeeeee");
+    hashMap.put("10005", "rrrrrr");
+    hashMap.put("10006", "tttttt");
+  }
+
+  public void destroyDataMethod(){
+    System.err.println("执行：destroy-method");
+    hashMap.clear();
+  }
+
   public String queryUserName(String uId) {
     return hashMap.get(uId);
   }
