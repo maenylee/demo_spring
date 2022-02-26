@@ -10,8 +10,15 @@
 package com.demo.admin.bean.service;
 
 import com.demo.admin.bean.dao.UserDao;
-import com.demo.bean07.factory.DisposableBean;
-import com.demo.bean07.factory.InitializingBean;
+import com.demo.bean08.factory.DisposableBean;
+import com.demo.bean08.factory.InitializingBean;
+import com.demo.bean08.BeansException;
+import com.demo.bean08.context.ApplicationContext;
+import com.demo.bean08.context.ApplicationContextAware;
+import com.demo.bean08.factory.BeanClassLoaderAware;
+import com.demo.bean08.factory.BeanFactory;
+import com.demo.bean08.factory.BeanFactoryAware;
+import com.demo.bean08.factory.BeanNameAware;
 
 import java.io.Serializable;
 
@@ -23,7 +30,11 @@ import java.io.Serializable;
  * @create 2021/12/6
  * @since 1.0.0
  */
-public class UserService implements Serializable, InitializingBean, DisposableBean {
+public class UserService implements Serializable, InitializingBean, DisposableBean, BeanNameAware,
+        BeanClassLoaderAware, ApplicationContextAware, BeanFactoryAware {
+
+  private ApplicationContext applicationContext;
+  private BeanFactory beanFactory;
 
   public void destroy() {
     System.err.println("执行：UserService.destroy");
@@ -59,6 +70,30 @@ public class UserService implements Serializable, InitializingBean, DisposableBe
             + userDao.queryUserName(uId)
             + "-" + company
             + "-" + location);
+  }
+
+  public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+    this.applicationContext = applicationContext;
+  }
+
+  public void setBeanClassLoader(ClassLoader classLoader) {
+    System.out.println("ClassLoader：" + classLoader);
+  }
+
+  public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
+    this.beanFactory = beanFactory;
+  }
+
+  public void setBeanName(String name) {
+    System.out.println("Bean Name is：" + name);
+  }
+
+  public ApplicationContext getApplicationContext() {
+    return applicationContext;
+  }
+
+  public BeanFactory getBeanFactory() {
+    return beanFactory;
   }
 
   @Override
